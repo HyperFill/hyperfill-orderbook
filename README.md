@@ -1,26 +1,14 @@
-```
-██╗  ██╗██╗   ██╗██████╗ ███████╗██████╗ ███████╗██╗██╗     ██╗     
-██║  ██║╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔════╝██║██║     ██║     
-███████║ ╚████╔╝ ██████╔╝█████╗  ██████╔╝█████╗  ██║██║     ██║     
-██╔══██║  ╚██╔╝  ██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║██║     ██║     
-██║  ██║   ██║   ██║     ███████╗██║  ██║██║     ██║███████╗███████╗
-╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
-
-          First AI Market Making Vault on SEI Network 
-             
-```
 
 
-
-# HyperFill Market Making API
+# NeoBank Market Making API
 
 ## TL,DR
-We've built an order book engine with on-chain settlement for decentralized market making for the SEI Hackathon when Filament API shut down. Built with Python/FastAPI, has live order matching, Web3 integration and automated trade settlement with cryptographic validation.
+We've built an order book engine with on-chain settlement for decentralized market making for the HBAR Hackathon when Filament API shut down. Built with Python/FastAPI, has live order matching, Web3 integration and automated trade settlement with cryptographic validation.
 
 ## Architecture
 
 ```python
-hyperfill-market-making-api/
+NeoBank-market-making-api/
 ├── main.py                          # FastAPI server & endpoint handlers (837 LOC)
 ├── orderbook/                       # Core order book engine
 │   ├── __init__.py
@@ -105,7 +93,7 @@ Place new limit orders with validation and settlement.
 ```python
 payload = {
     "account": "0x...",
-    "baseAsset": "SEI",
+    "baseAsset": "HBAR",
     "quoteAsset": "USDT", 
     "price": "1.50",
     "quantity": "100.0",
@@ -303,12 +291,12 @@ async def settle_trades_if_any(order_dict: dict) -> dict:
 
 ### Environment Variables
 ```python
-WEB3_PROVIDER = os.getenv("WEB3_PROVIDER", "https://evm-rpc-testnet.sei-apis.com")
+WEB3_PROVIDER = os.getenv("WEB3_PROVIDER", "https://evm-rpc-testnet.hedera-apis.com")
 CONTRACT_ADDRESS = os.getenv("CONTRACT_ADDRESS", "0xF14dbF48b727AD8346dD8Fa6C0FC42FCb81FF115")
 PRIVATE_KEY = os.getenv("PRIVATE_KEY")
 
 TOKEN_ADDRESSES = {
-    "SEI": os.getenv("SEI_TOKEN_ADDRESS", "0x8eFcF5c2DDDA6C1A63D8395965Ca6c0609CE32D5"),
+    "HBAR": os.getenv("HBAR_TOKEN_ADDRESS", "0x8eFcF5c2DDDA6C1A63D8395965Ca6c0609CE32D5"),
     "USDT": os.getenv("USDT_TOKEN_ADDRESS", "0x54099052D0e04a5CF24e4c7c82eA693Fb25E0Bed")
 }
 ```
@@ -330,7 +318,7 @@ python-multipart==0.0.20 # Form data parsing
 pip install -r requirements.txt
 
 # Set environment variables
-export WEB3_PROVIDER=https://evm-rpc-testnet.sei-apis.com
+export WEB3_PROVIDER=https://evm-rpc-testnet.hedera-apis.com
 export CONTRACT_ADDRESS=0xF14dbF48b727AD8346dD8Fa6C0FC42FCb81FF115
 export PRIVATE_KEY=your_private_key
 

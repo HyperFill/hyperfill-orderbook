@@ -184,7 +184,7 @@ Accepts payloads such as:
 
 ### Scalability & Fault Tolerance
 
-* Handle high volume (e.g., >40 orders/sec as Filament does)([Sei Blog](https://blog.sei.io/filament-sei-networks-native-derivatives-dex-secures-1-1-million-in-seed-funding/?utm_source=chatgpt.com)).
+* Handle high volume (e.g., >40 orders/sec as Filament does)([Hedera Blog](https://blog.hedera.io/filament-hedera-networks-native-derivatives-dex-secures-1-1-million-in-seed-funding/?utm_source=chatgpt.com)).
 * Failover for WebSocket or API service fallback.
 
 ---
@@ -239,4 +239,4 @@ Accepts payloads such as:
 
 ## Summary
 
-Your PRD establishes a robust foundation for building an on-chain, signature-verified, order-book exchange with live streaming and smart contract settlement—closely mirroring Filament's design patterns([docs.filament.finance](https://docs.filament.finance/market-makers/filament-api?utm_source=chatgpt.com), [Sei Blog](https://blog.sei.io/filament-sei-networks-native-derivatives-dex-secures-1-1-million-in-seed-funding/?utm_source=chatgpt.com)). Let me know if you'd like to expand on any section—technical specs, smart-contract interfaces, performance benchmarks—or tailor it to your specific blockchain stack or language of choice!
+Your PRD establishes a robust foundation for building an on-chain, signature-verified, order-book exchange with live streaming and smart contract settlement—closely mirroring Filament's design patterns([docs.filament.finance](https://docs.filament.finance/market-makers/filament-api?utm_source=chatgpt.com), [Hedera Blog](https://blog.hedera.io/filament-hedera-networks-native-derivatives-dex-secures-1-1-million-in-seed-funding/?utm_source=chatgpt.com)). Let me know if you'd like to expand on any section—technical specs, smart-contract interfaces, performance benchmarks—or tailor it to your specific blockchain stack or language of choice!
